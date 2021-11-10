@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ngossiabusiness": {
+      "hosting": {
+        "berverlyandroid": [
+          "ngossiabusiness"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ngossiabusiness"
+  }
+}
