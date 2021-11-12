@@ -1,1 +1,741 @@
-<p>hbluxboutique works!</p>
+
+<!-- Start Product Area -->
+  <div class="product-area section">
+          <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h2>Tendance d'articles</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="product-info">
+            <div class="nav-main">
+              <!-- Tab Nav -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item "><a class="nav-link active" data-toggle="tab" href="hbluxboutique#man" role="tab">Hommes</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="hbluxboutique#women" role="tab">Femmes</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="hbluxboutique#kids" role="tab">Gamins</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="hbluxboutique#accessories" role="tab">Accessoires</a></li>
+              </ul>
+              <!--/ End Tab Nav -->
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <!-- Start Single Tab -->
+             <div  class="tab-pane fade show active" id="man" role="tabpanel">
+                <div class="tab-single">
+                  <div class="row">
+                    <div *ngFor="let article of articles" class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="#">
+                            <img class="default-img" style="height:400px !important" src="assets/images/{{article.photos[0]}}" alt="#">
+                            <img class="hover-img" style="height:400px !important" src="assets/images/{{article.photos[0]}}" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" (click)="onAjouterAuPanier(article) ">
+                                <i class=" ti-heart "></i>
+                                <span>Ajouter au panier</span>
+                              </a>
+                              <a *ngIf="article.id" title="Compare" (click)="editArticle(article.id)">
+                                <i class="ti-bar-chart-alt"></i><span>comparer</span>
+                              </a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >{{article.description}} </a></h3>
+                          <div class="product-price">
+                            <span>{{article.prix}} </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Start Single Tab -->
+             <!--  <div class="tab-pane fade" id="women" role="tabpanel">
+                <div class="tab-single">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image </a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image3</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="new">Nouveau</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="price-dec">30% Off</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image></a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" >Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a >Breve description de l'image</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a >
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="out-of-stock">Chaud</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" ><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" ><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" ><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="#">Breve description de l'image</a></h3>
+                          <div class="product-price">
+                            <span class="old">$60.00</span>
+                            <span>$50.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--/ End Single Tab -->
+              <!-- Start Single Tab -->
+              <!-- <div class="tab-pane fade" id="kids" role="tabpanel">
+                <div class="tab-single">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="#">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="#">Women Chaud Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Pink Show</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Bags Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="new">Nouveau</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Women Pant Collectons</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Bags Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="price-dec">30% Off</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Cap For Women</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Polo Dress For Women</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="out-of-stock">Chaud</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Black Sunglass For Women</a></h3>
+                          <div class="product-price">
+                            <span class="old">$60.00</span>
+                            <span>$50.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--/ End Single Tab -->
+              <!-- Start Single Tab -->
+              <!-- <div class="tab-pane fade" id="accessories" role="tabpanel">
+                <div class="tab-single">
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Women Chaud Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Pink Show</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Bags Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="new">Nouveau</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Women Pant Collectons</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Bags Collection</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="price-dec">30% Off</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Awesome Cap For Women</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Polo Dress For Women</a></h3>
+                          <div class="product-price">
+                            <span>$29.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                      <div class="single-product">
+                        <div class="product-img">
+                          <a href="">
+                            <img class="default-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <img class="hover-img" src="assets/images/40161748_269394390549598_3495275184695279616_n.jpg" alt="#">
+                            <span class="out-of-stock">Chaud</span>
+                          </a>
+                          <div class="button-head">
+                            <div class="product-action">
+                              <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Coup d'oeil</span></a>
+                              <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Ajouter au panier</span></a>
+                              <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>comparer</span></a>
+                            </div>
+                            <div class="product-action-2">
+                              <a title="Add to cart" href="#">Ajouter au panier</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h3><a href="">Black Sunglass For Women</a></h3>
+                          <div class="product-price">
+                            <span class="old">$60.00</span>
+                            <span>$50.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!--/ End Single Tab -->
+
+              <!--/ End Single Tab -->
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+  </div>
+<!-- End Product Area -->
+
+
+<!-- Start Most Popular -->
+
+<!-- End Most Popular Area -->
+
+

@@ -19,9 +19,8 @@
           <!-- Top Right -->
           <div class="right-content">
             <ul class="list-main">
-              <li><i class="ti-location-pin"></i> Magasin</li>
-              <li><i class="ti-alarm-clock"></i> <a href="#">Affaire quotidienne</a></li>
-              <li><i class="ti-user"></i> <a href="#">Mont compte</a></li>
+              <li><i class="ti-location-pin"></i><a href="#">Nos points de retrait</a> </li>
+              <li><i class="ti-user"></i> <a href="#">Mon compte</a></li>
               <li><i class="ti-power-off"></i><a href="#">Connexion</a></li>
             </ul>
           </div>
@@ -37,7 +36,8 @@
         <div class="col-lg-2 col-md-2 col-12">
           <!-- Logo -->
           <div class="logo">
-            <a href="index.html"><img height="100" width="100" src="images/favicon.jpg" alt="logo"></a>
+            <a href="index.html"><img height="100" width="100"
+              src="assets/images/favicon.jpg" alt="logo"></a>
           </div>
           <!--/ End Logo -->
           <!-- Search Form -->
@@ -47,75 +47,35 @@
             <div class="search-top">
               <form class="search-form">
                 <input type="text" placeholder="Rechercher..." name="search">
-                <button value="search" type="submit"><i class="ti-search"></i></button>
+                <button value="search" type="submit"><i class="ti-search"></i>
+                </button>
               </form>
             </div>
             <!--/ End Search Form -->
           </div>
           <!--/ End Search Form -->
-          <div class="mobile-nav"></div>
         </div>
         <div class="col-lg-8 col-md-7 col-12">
           <div class="search-bar-top">
-            <div class="search-bar">
-              <select>
-                <option selected="selected">Pour tous</option>
+            <div class="d-flex justify-content-lg-center align-content-lg-center">
+              <select style=" width:'150px !important'" class="form-control">
+                <option selected="selected">Mixte</option>
                 <option>Pour hommes</option>
                 <option>Pour dames</option>
                 <option>Pour enfants</option>
               </select>
               <form >
-                <input name="search" placeholder="Faites votre recherche....." type="search">
-                <button class="btnn"><i class="ti-search"></i></button>
+               <div class="d-flex flex-lg-row">
+                <input class="form-control" name="search" placeholder="Faites votre recherche....."
+                type="search">
+                <button class="btn"><i class="ti-search"></i></button>
+               </div>
               </form>
             </div>
           </div>
         </div>
         <div class="col-lg-2 col-md-3 col-12">
-          <div class="right-bar">
-            <!-- Search Form -->
-            <div class="sinlge-bar">
-              <a href="#" class="single-icon">
-                <i class="fa fa-heart-o" aria-hidden="true"></i></a>
-            </div>
-            <div class="sinlge-bar">
-              <a href="#" class="single-icon">
-                <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-            </div>
-            <div class="sinlge-bar shopping">
-              <a href="#" class="single-icon">
-                <i class="ti-bag"></i> <span class="total-count">2</span></a>
-              <!-- Shopping Item -->
-              <div class="shopping-item">
-                <div class="dropdown-cart-header">
-                  <span>2 produits</span>
-                  <a href="#">Consulter Panier</a>
-                </div>
-                <ul class="shopping-list">
-                  <li>
-                    <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                    <a class="cart-img" href="#"><img src="images/short.jpg" class="img-fluid" height="70" width="70" alt="#"></a>
-                    <h4><a href="#">T-shirt</a></h4>
-                    <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                  </li>
-                  <li>
-                    <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                    <a class="cart-img" href="#"><img src="images/joking.jpg" class="img-fluid" height="70" width="70" alt="#"></a>
-                    <h4><a href="#">Joking</a></h4>
-                    <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                  </li>
-                </ul>
-                <div class="bottom">
-                  <div class="total">
-                    <span>Total</span>
-                    <span class="total-amount">$134.00</span>
-                  </div>
-                  <a href="checkout.html" class="btn animate">Valider</a>
-                </div>
-              </div>
-              <!--/ End Shopping Item -->
-            </div>
-          </div>
+          <app-hblux-single-checkout></app-hblux-single-checkout>
         </div>
       </div>
     </div>
@@ -133,33 +93,35 @@
                 <div class="navbar-collapse">
                   <div class="nav-inner">
                     <ul class="nav main-menu menu navbar-nav">
-                      <li ><a href="#"> <span class="text-warning hb" >Hb</span> <span class="text-secondary hb" > LUX</span></a>
-                      <li class="active"><a href="#">Accueil</a>
+                      <li ><a routerLink="hblux">
+                        <span class="text-warning hb" >Hb</span>
+                        <span class="text-secondary hb" > LUX</span></a>
+                      <li routerLinkActive="true" ><a  routerLink="hblux">Accueil</a>
 
                       </li>
-                      <li><a href="#">
+                      <li>
+                        <a routerLinkActive routerLinkActive routerLink="hbluxboutique">
 
                           HbLux Boutique
                           <i class="ti-angle-down"></i><span class="new">Nouveau</span></a>
                         <ul class="dropdown">
-                          <li><a href="#">Grille de magasin</a></li>
-                          <li><a href="#">Liste des boutiques</a></li>
-                          <li><a href="#">magasiner</a></li>
-                          <li><a href="#">Chariot</a></li>
-                          <li><a href="checkout.html">Vérifier</a></li>
+                          <li><a routerLinkActive routerLink="hbluxboutique">Nouvelle collection</a></li>
+                          <li><a routerLinkActive routerLink="hbluxboutique">Spécial homme</a></li>
+                          <li><a routerLinkActive routerLink="hbluxboutique">Spécial femme</a></li>
+                          <li><a routerLinkActive routerLink="hbluxboutique">Enfants</a></li>
                         </ul>
                       </li>
                       <li>
-                        <a href="#">Evénements<i class="ti-angle-down"></i></a>
+                        <a routerLinkActive routerLink="hbluxapropos">Evénements<i class="ti-angle-down"></i></a>
                         <ul class="dropdown">
-                          <li><a href="#">À propos de nous</a></li>
-                          <li><a href="#">Connexion</a></li>
-                          <li><a href="#">S'inscrire</a></li>
+                          <li><a routerLinkActive routerLink="hbluxapropos">À propos de nous</a></li>
+                          <li><a routerLinkActive  routerLink="hbluxapropos">Connexion</a></li>
+                          <li><a routerLinkActive routerLink="hbluxapropos">S'inscrire</a></li>
 
                         </ul>
                       </li>
 
-                      <li><a href="contact.html">Nous contacter</a></li>
+                      <li><a routerLinkActive routerLink="hbluxcontact">Nous contacter</a></li>
                     </ul>
                   </div>
                 </div>

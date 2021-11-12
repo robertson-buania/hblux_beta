@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Article } from 'src/app/modele/article.modele';
+import { HbluxArticleService } from 'src/app/services/hblux-article.service';
 
 @Component({
   selector: 'app-hblux-header',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HbluxHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private articleService:HbluxArticleService) { }
 
   ngOnInit(): void {
+
   }
 
 }

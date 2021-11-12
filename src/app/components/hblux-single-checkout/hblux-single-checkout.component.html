@@ -1,0 +1,45 @@
+<div class="right-bar" *ngIf="panier">
+  <!-- Search Form -->
+  <div class="sinlge-bar">
+    <a href="#" class="single-icon">
+      <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+  </div>
+  <div class="sinlge-bar">
+    <a href="#" class="single-icon">
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+  </div>
+  <div class="sinlge-bar shopping">
+    <a href="#" class="single-icon">
+      <i class="ti-bag"></i> <span class="total-count">{{panier.length}} </span></a>
+    <!-- Shopping Item -->
+    <div class="shopping-item">
+      <div class="dropdown-cart-header">
+        <span>{{panier.length}} produits</span>
+        <a routerLink="checkout">Consulter Panier</a>
+      </div>
+      <ul class="shopping-list">
+        <li>
+          <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+          <a class="cart-img" href="#"><img src="assets/images/short.jpg" class="img-fluid" height="70" width="70" alt="#"></a>
+          <h4><a href="#">{{panier[0].nom}} </a></h4>
+          <p class="quantity">{{panier[0].quantite}}x - <span class="amount">£{{panier[0].prix}}</span></p>
+        </li>
+        <li>
+          <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+          <a class="cart-img" href="#"><img src="assets/images/short.jpg" class="img-fluid" height="70" width="70" alt="#"></a>
+          <h4><a href="#">{{panier[1].nom}} </a></h4>
+          <p class="quantity">{{panier[0].quantite}}x - <span class="amount">£{{panier[0].prix}}</span></p>
+        </li>
+
+      </ul>
+      <div class="bottom">
+        <div class="total">
+          <span>Total</span>
+          <span class="total-amount">£134.00</span>
+        </div>
+        <a routerLink="payer" class="btn animate">Valider</a>
+      </div>
+    </div>
+    <!--/ End Shopping Item -->
+  </div>
+</div>

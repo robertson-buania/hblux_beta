@@ -1,0 +1,52 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "nom": "T-shirt",
+      "prix": 20,
+      "type": "mixte",
+      "quantite": 3,
+      "disponible": true,
+      "photos": [
+        "femme.jpg",
+        "hblog.jpg",
+        "feminin.jpg",
+        "short.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Pull",
+      "type": "homme",
+      "prix": 40,
+      "quantite": 2,
+      "disponible": true,
+      "photos": [
+        "tous.jpg",
+        "homme.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Képi",
+      "prix": 10,
+      "type": "femme",
+      "quantite": 127,
+      "disponible": true,
+      "photos": [
+        "képi.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Bras cassé",
+      "prix": 40,
+      "type": "femme",
+      "quantite": 3,
+      "disponible": true,
+      "photos": [
+        "bras.jpg"
+      ]
+    }
+  ]
+}
